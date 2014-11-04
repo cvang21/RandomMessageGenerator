@@ -11,8 +11,6 @@ package randommessagegenerator;
  */
 public class Startup {
     MessageGenerator readerBoard = new ReaderBoard();
-    readerBoard.addNewMessage("message 1");
-    readerBoard.addNewMessage("Message 2");
-    readerBoard.addNewMessage("Message 3");
-    readerBoard.generateRandomMessage();
+
+    
 }

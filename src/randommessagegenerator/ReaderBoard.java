@@ -7,6 +7,7 @@ package randommessagegenerator;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
@@ -36,23 +37,17 @@ public class ReaderBoard implements MessageGenerator {
     @Override
     public void addNewMessage(String msg) {
         if (msg == null || msg.length()==0 ){
-        //validate here
+        //Add Custom exception here
         }           
         
         messageTxt = msg;
-        
-        Set<String> thelist = new HashSet<String>(myList);
-        for(String s : myList) {
-            myList.add(messageTxt);
+        myList.add(messageTxt);
         }
- 
-    }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 43 * hash + Objects.hashCode(this.myList);
-        hash = 43 * hash + Objects.hashCode(this.messageTxt);
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.messageTxt);
         return hash;
     }
 
@@ -65,13 +60,13 @@ public class ReaderBoard implements MessageGenerator {
             return false;
         }
         final ReaderBoard other = (ReaderBoard) obj;
-        if (!Objects.equals(this.myList, other.myList)) {
-            return false;
-        }
         if (!Objects.equals(this.messageTxt, other.messageTxt)) {
             return false;
         }
         return true;
     }
+ 
     
-}
+    }
+
+
