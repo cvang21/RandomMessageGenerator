@@ -10,7 +10,15 @@ package randommessagegenerator;
  * @author cvadmin
  */
 public class Startup {
-    MessageGenerator readerBoard = new ReaderBoard();
+    public static void main(String[] args) {
+         MessageGenerator readerBoard = new ReaderBoard();
+         readerBoard.addNewMessage("Message A");
+         readerBoard.addNewMessage("Message B");
+         readerBoard.addNewMessage("Message C");
+         
+         System.out.println(readerBoard.generateRandomMessage());
+         System.out.println(readerBoard.generateRandomMessage());      
+    }
 
     
 }
